@@ -20,6 +20,9 @@ dev = [
     "pytest>=7.0.0",
 ]
 
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "tests.py"]
+
 [tool.uv]
 dev-dependencies = [
     "flake8>=7.0.0",

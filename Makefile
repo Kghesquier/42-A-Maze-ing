@@ -1,5 +1,3 @@
-.PHONY: all install lint run debug clean fclean
-
 all: install lint run
 
 install:
@@ -19,7 +17,7 @@ debug:
 	python3 -m pdb a_maze_ing.py config.txt
 
 test:
-	python3 -m pytest tests/ -v
+	python3 -m pytest test_amazing.py -v
 
 clean:
 	rm -rf __pycache__ .mypy_cache .pytest_cache mazegen/__pycache__ \
@@ -27,3 +25,5 @@ clean:
 
 fclean: clean
 	rm -rf *.egg-info dist build mazegen-*.whl
+
+.PHONY: all install lint run debug clean fclean

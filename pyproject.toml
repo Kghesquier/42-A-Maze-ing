@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mazegen"
+version = "1.0.0"
+description = "Maze generator and solver for the 42 A-Maze-ing project"
+requires-python = ">=3.10"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mazegen*"]
+
+[project.optional-dependencies]
+dev = [
+    "flake8>=7.0.0",
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "flake8>=7.0.0",
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+]
